@@ -51,10 +51,10 @@ export const cloneEncounterPositions: CloneEncounterPositionInfo[] = [
 /** プレイヤーへの線が接続される分身位置: 8方位 */
 export type TetherClonePosition = 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW'
 
-/** 床マーカー種類 */
+/** 床マカ種類 */
 export type WaymarkType = 'A' | 'B' | 'C' | 'D' | '1' | '2' | '3' | '4'
 
-/** プレイヤーのヘッドマーカー種類: 攻撃、禁止、拘束 */
+/** プレイヤーのヘッドマカ種類: 攻撃、禁止、拘束 */
 export type MarkerType = 'attack1' | 'attack2' | 'attack3' | 'attack4' | 'stop1' | 'stop2' | 'bind1' | 'bind2'
 
 export type PlayerPositionInfo = {
@@ -68,17 +68,17 @@ export type PlayerPositionInfo = {
 }
 
 export const playerPositions: PlayerPositionInfo[] = [
-  { id: 'N', name: 'Aマーカー', waymark: 'A', marker: 'attack1', group: 1, groupType: 'stack', gridPosition: { row: 1, col: 2 } },
-  { id: 'NE', name: '1番マーカー', waymark: '1', marker: 'attack3', group: 1, groupType: 'stack', gridPosition: { row: 1, col: 3 } },
-  { id: 'E', name: 'Bマーカー', waymark: 'B', marker: 'attack2', group: 2, groupType: 'stack', gridPosition: { row: 2, col: 3 } },
-  { id: 'SE', name: '2番マーカー', waymark: '2', marker: 'attack4', group: 2, groupType: 'stack', gridPosition: { row: 3, col: 3 } },
-  { id: 'S', name: 'Cマーカー', waymark: 'C', marker: 'stop1', group: 1, groupType: 'spread', gridPosition: { row: 3, col: 2 } },
-  { id: 'SW', name: '3番マーカー', waymark: '3', marker: 'bind1', group: 1, groupType: 'spread', gridPosition: { row: 3, col: 1 } },
-  { id: 'W', name: 'Dマーカー', waymark: 'D', marker: 'stop2', group: 2, groupType: 'spread', gridPosition: { row: 2, col: 1 } },
-  { id: 'NW', name: '4番マーカー', waymark: '4', marker: 'bind2', group: 2, groupType: 'spread', gridPosition: { row: 1, col: 1 } },
+  { id: 'N', name: 'Aマカ', waymark: 'A', marker: 'attack1', group: 1, groupType: 'stack', gridPosition: { row: 1, col: 2 } },
+  { id: 'NE', name: '1番マカ', waymark: '1', marker: 'attack3', group: 1, groupType: 'stack', gridPosition: { row: 1, col: 3 } },
+  { id: 'E', name: 'Bマカ', waymark: 'B', marker: 'attack2', group: 2, groupType: 'stack', gridPosition: { row: 2, col: 3 } },
+  { id: 'SE', name: '2番マカ', waymark: '2', marker: 'attack4', group: 2, groupType: 'stack', gridPosition: { row: 3, col: 3 } },
+  { id: 'S', name: 'Cマカ', waymark: 'C', marker: 'stop1', group: 1, groupType: 'spread', gridPosition: { row: 3, col: 2 } },
+  { id: 'SW', name: '3番マカ', waymark: '3', marker: 'bind1', group: 1, groupType: 'spread', gridPosition: { row: 3, col: 1 } },
+  { id: 'W', name: 'Dマカ', waymark: 'D', marker: 'stop2', group: 2, groupType: 'spread', gridPosition: { row: 2, col: 1 } },
+  { id: 'NW', name: '4番マカ', waymark: '4', marker: 'bind2', group: 2, groupType: 'spread', gridPosition: { row: 1, col: 1 } },
 ]
 
-/** 分身位置種類: Aマーカー または Cマーカー */
+/** 分身位置種類: Aマカ または Cマカ */
 export type ClonePosition = 'A' | 'C'
 
 export const safeAreas: ClonePosition[] = ['A', 'C']
@@ -128,7 +128,7 @@ export const nearFarMapping: Record<`${RolePosition}-${StackGroup}-${TowerType}`
   'ranged-2-dark': '2',
 }
 
-/** 移動地点: 床マーカー または X（散開を避ける場所）*/
+/** 移動地点: 床マカ または X（散開を避ける場所）*/
 export type MovementPosition = WaymarkType | 'X'
 
 /** パターン別移動経路 */
@@ -155,14 +155,14 @@ export const movementMapping: Record<
 }
 
 export const movementPositionNames: Record<MovementPosition, { text: string; color: string; gimmick: string; urgent?: boolean }> = {
-  '1': { text: '1番マーカー', color: '#FF6E6E', gimmick: '頭割り' },
-  '2': { text: '2番マーカー', color: '#F3FB9C', gimmick: '頭割り' },
-  '3': { text: '3番マーカー', color: '#9BECFE', gimmick: '?' },
-  '4': { text: '4番マーカー', color: '#C878FF', gimmick: '?' },
-  A: { text: 'Aマーカー', color: '#FF6E6E', gimmick: '?' },
-  B: { text: 'Bマーカー', color: '#F3FB9C', gimmick: '?' },
-  C: { text: 'Cマーカー外', color: '#9BECFE', gimmick: '散開', urgent: true },
-  D: { text: 'Dマーカー外', color: '#C878FF', gimmick: '散開', urgent: true },
+  '1': { text: '1番マカ', color: '#FF6E6E', gimmick: '頭割り' },
+  '2': { text: '2番マカ', color: '#F3FB9C', gimmick: '頭割り' },
+  '3': { text: '3番マカ', color: '#9BECFE', gimmick: '?' },
+  '4': { text: '4番マカ', color: '#C878FF', gimmick: '?' },
+  A: { text: 'Aマカ', color: '#FF6E6E', gimmick: '?' },
+  B: { text: 'Bマカ', color: '#F3FB9C', gimmick: '?' },
+  C: { text: 'Cマカ外', color: '#9BECFE', gimmick: '散開', urgent: true },
+  D: { text: 'Dマカ外', color: '#C878FF', gimmick: '散開', urgent: true },
   X: { text: '中央', color: '#FFFFFF', gimmick: '散開回避' },
 }
 
@@ -188,14 +188,14 @@ export const postPhaseMovementMapping: Record<
   `${StackGroup}-${CloneEncounterPosition}-${ClonePosition}-${ClonePosition}-${IslandType}`,
   [PostPhaseMovementPosition, PostPhaseMovementPosition, PostPhaseMovementPosition, PostPhaseMovementPosition]
 > = {
-  '1-cross-A-A-B': ['AB', 'b', 'A', '1'], // Aが左右安全だが、Aが食われた => Bの島で上下安全 => 1番マーカーで左右安全（不便）
-  '1-cross-A-A-D': ['AB', 'd', 'A', '1'], // Aが左右安全だが、Aが食われた => Dの島で上下安全 => 1番マーカーで左右安全（不便）
-  '1-cross-A-C-B': ['AB', '2', 'A', '0'], // Aが左右安全だが、Cが食われた => Bの島で左右安全 => 1番マーカーで上下安全（楽）
-  '1-cross-A-C-D': ['AB', '4', 'A', '0'], // Aが左右安全だが、Cが食われた => Dの島で左右安全 => 1番マーカーで上下安全（楽）
-  '1-cross-C-A-B': ['AB', '2', 'A', '0'], // Cが左右安全だが、Aが食われた => Bの島で左右安全 => 1番マーカーで上下安全（楽）
-  '1-cross-C-A-D': ['AB', '4', 'A', '0'], // Cが左右安全だが、Aが食われた => Dの島で左右安全 => 1番マーカーで上下安全（楽）
-  '1-cross-C-C-B': ['AB', 'b', 'A', '1'], // Cが左右安全だが、Cが食われた => Bの島で上下安全 => 1番マーカーで左右安全（不便）
-  '1-cross-C-C-D': ['AB', 'd', 'A', '1'], // Cが左右安全だが、Cが食われた => Dの島で上下安全 => 1番マーカーで左右安全（不便）
+  '1-cross-A-A-B': ['AB', 'b', 'A', '1'], // Aが左右安全だが、Aが食われた => Bの島で上下安全 => 1番マカで左右安全（不便）
+  '1-cross-A-A-D': ['AB', 'd', 'A', '1'], // Aが左右安全だが、Aが食われた => Dの島で上下安全 => 1番マカで左右安全（不便）
+  '1-cross-A-C-B': ['AB', '2', 'A', '0'], // Aが左右安全だが、Cが食われた => Bの島で左右安全 => 1番マカで上下安全（楽）
+  '1-cross-A-C-D': ['AB', '4', 'A', '0'], // Aが左右安全だが、Cが食われた => Dの島で左右安全 => 1番マカで上下安全（楽）
+  '1-cross-C-A-B': ['AB', '2', 'A', '0'], // Cが左右安全だが、Aが食われた => Bの島で左右安全 => 1番マカで上下安全（楽）
+  '1-cross-C-A-D': ['AB', '4', 'A', '0'], // Cが左右安全だが、Aが食われた => Dの島で左右安全 => 1番マカで上下安全（楽）
+  '1-cross-C-C-B': ['AB', 'b', 'A', '1'], // Cが左右安全だが、Cが食われた => Bの島で上下安全 => 1番マカで左右安全（不便）
+  '1-cross-C-C-D': ['AB', 'd', 'A', '1'], // Cが左右安全だが、Cが食われた => Dの島で上下安全 => 1番マカで左右安全（不便）
   '1-plus-A-A-B': ['A', 'b', 'AB', '1'],
   '1-plus-A-A-D': ['A', 'd', 'AB', '1'],
   '1-plus-A-C-B': ['A', '2', 'AB', '0'],
@@ -223,14 +223,14 @@ export const postPhaseMovementMapping: Record<
 }
 
 export const postPhasePositionNames: Record<PostPhaseMovementPosition, { text: string; color: string; gimmick: string }> = {
-  '1': { text: '1番マーカー両側', color: '#FF6E6E', gimmick: '不便' },
-  '2': { text: '2番マーカー', color: '#F3FB9C', gimmick: '楽' },
+  '1': { text: '1番マカ両側', color: '#FF6E6E', gimmick: '不便' },
+  '2': { text: '2番マカ', color: '#F3FB9C', gimmick: '楽' },
   '0': { text: '腹下', color: '#FFFFFF', gimmick: '楽' },
-  '4': { text: '4番マーカー', color: '#C878FF', gimmick: '楽' },
-  A: { text: 'Aマーカー外', color: '#FF6E6E', gimmick: '頭割り' },
-  B: { text: 'Bマーカー外', color: '#F3FB9C', gimmick: '頭割り' },
+  '4': { text: '4番マカ', color: '#C878FF', gimmick: '楽' },
+  A: { text: 'Aマカ外', color: '#FF6E6E', gimmick: '頭割り' },
+  B: { text: 'Bマカ外', color: '#F3FB9C', gimmick: '頭割り' },
   AB: { text: '1時外', color: '#FFFFFF', gimmick: '頭割り' },
   BC: { text: '5時外', color: '#FFFFFF', gimmick: '頭割り' },
-  b: { text: 'Bマーカー上下', color: '#F3FB9C', gimmick: '不便' },
-  d: { text: 'Dマーカー上下', color: '#C878FF', gimmick: '不便' },
+  b: { text: 'Bマカ上下', color: '#F3FB9C', gimmick: '不便' },
+  d: { text: 'Dマカ上下', color: '#C878FF', gimmick: '不便' },
 }

@@ -66,7 +66,7 @@ export const DreamSwitchB = () => {
             >
               <img
                 src={`waymark${clonePosition.toLowerCase()}.png`}
-                alt={`${clonePosition}マーカー両側`}
+                alt={`${clonePosition}マカ両側`}
                 className={cn(
                   'size-[10vmin] border-[0.5vmin] rounded-full box-border',
                   clonePosition === 'A' && 'border-[#FF6E6EFF] bg-[#FF6E6E99]',

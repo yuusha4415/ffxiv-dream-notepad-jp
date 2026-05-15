@@ -54,7 +54,7 @@ export const DreamSwitchA = () => {
           {marker && (
             <img
               src={`${marker}.png`}
-              alt="マーカー"
+              alt="マカ"
               className="size-[16vmin] absolute top-0 left-0 right-0 bottom-0 m-auto pointer-events-none"
             />
           )}
@@ -73,7 +73,7 @@ export const DreamSwitchA = () => {
             >
               <img
                 src={`waymark${area.toLowerCase()}.png`}
-                alt={`${area}マーカー両側`}
+                alt={`${area}マカ両側`}
                 className={cn(
                   'size-[10vmin] border-[0.5vmin] rounded-full box-border',
                   area === 'A' && 'border-[#FF6E6EFF] bg-[#FF6E6E99]',
