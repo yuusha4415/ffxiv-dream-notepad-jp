@@ -4,5 +4,5 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/ffxiv-dream-notepad/',
+  base: '/ffxiv-dream-notepad-jp/',
 })
