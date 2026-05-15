@@ -155,8 +155,8 @@ export const movementMapping: Record<
 }
 
 export const movementPositionNames: Record<MovementPosition, { text: string; color: string; gimmick: string; urgent?: boolean }> = {
-  '1': { text: '1番マーカー', color: '#FF6E6E', gimmick: 'スタック' },
-  '2': { text: '2番マーカー', color: '#F3FB9C', gimmick: 'スタック' },
+  '1': { text: '1番マーカー', color: '#FF6E6E', gimmick: '頭割り' },
+  '2': { text: '2番マーカー', color: '#F3FB9C', gimmick: '頭割り' },
   '3': { text: '3番マーカー', color: '#9BECFE', gimmick: '?' },
   '4': { text: '4番マーカー', color: '#C878FF', gimmick: '?' },
   A: { text: 'Aマーカー', color: '#FF6E6E', gimmick: '?' },
@@ -227,10 +227,10 @@ export const postPhasePositionNames: Record<PostPhaseMovementPosition, { text: s
   '2': { text: '2番マーカー', color: '#F3FB9C', gimmick: '楽' },
   '0': { text: '腹下', color: '#FFFFFF', gimmick: '楽' },
   '4': { text: '4番マーカー', color: '#C878FF', gimmick: '楽' },
-  A: { text: 'Aマーカー外', color: '#FF6E6E', gimmick: 'スタック' },
-  B: { text: 'Bマーカー外', color: '#F3FB9C', gimmick: 'スタック' },
-  AB: { text: '1時外', color: '#FFFFFF', gimmick: 'スタック' },
-  BC: { text: '5時外', color: '#FFFFFF', gimmick: 'スタック' },
+  A: { text: 'Aマーカー外', color: '#FF6E6E', gimmick: '頭割り' },
+  B: { text: 'Bマーカー外', color: '#F3FB9C', gimmick: '頭割り' },
+  AB: { text: '1時外', color: '#FFFFFF', gimmick: '頭割り' },
+  BC: { text: '5時外', color: '#FFFFFF', gimmick: '頭割り' },
   b: { text: 'Bマーカー上下', color: '#F3FB9C', gimmick: '不便' },
   d: { text: 'Dマーカー上下', color: '#C878FF', gimmick: '不便' },
 }
