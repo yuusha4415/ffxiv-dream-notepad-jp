@@ -95,7 +95,7 @@ export const PostIslandMovement = () => {
       )}
 
       {movementDirection && (
-        <div className="absolute top-0 left-0 right-0 w-full flex items-center justify-center text-white text-[5vmin] font-bold pointer-events-none">
+        <div className="absolute top-0 left-0 right-0 w-full flex items-center justify-center text-white text-[4vmin] font-bold pointer-events-none" style={{ fontSize: '4vmin' }}>
           <ruby style={{ color: postPhasePositionNames[movementDirection[0]].color }}>
             {postPhasePositionNames[movementDirection[0]].text}
             <rt>{postPhasePositionNames[movementDirection[0]].gimmick}</rt>
